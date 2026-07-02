@@ -20,14 +20,14 @@ class RecoveryOption extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppColors.textwhite,
+        color: AppColors.bgwhite,
       ),
       child: Row(
         children: [
           CircleAvatar(
             radius: 16,
             backgroundColor:
-            selected ? Colors.teal : Colors.grey.shade300,
+            selected ? AppColors.links : AppColors.hint,
             child: Icon(
               Icons.check,
               color: Colors.white,

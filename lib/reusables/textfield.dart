@@ -62,7 +62,7 @@ class _AppTextFieldState extends State<AppTextField> {
                   _obscure =!_obscure;
                 });
               },
-              child: Icon(_obscure?Icons.visibility_off:Icons.visibility, color: AppColors.tColor,)) : null,
+              child: Icon(_obscure?Icons.visibility_off_outlined:Icons.visibility_off_outlined, color: AppColors.tColor,)) : null,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16.r),
             borderSide: BorderSide.none,

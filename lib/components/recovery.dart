@@ -22,24 +22,26 @@ class _RecoveryState extends State<Recovery> {
       backgroundColor: AppColors.textwhite,
       body: SafeArea(child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 54),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          SvgPicture.asset("assets/icons/lock.svg", width: 44, height: 44,),
-          SizedBox(height: 38),
-          Titletext(text: "Password Recovery"),
-          SizedBox(height: 12),
-          Ntext(text: "Enter your registered email below to receive password instructions"),
-          SizedBox(height: 32),
-          AppTextField(controller: emailController, hintText: "Email Address"),
-          SizedBox(height: 32),
-            GestureDetector(onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>  Identify(),),);
-            },
-                child: AppButton(title: "Send me an Email")),
-        ],),
+        child: SingleChildScrollView(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            SvgPicture.asset("assets/icons/lock.svg", width: 90, height: 76,),
+            SizedBox(height: 24),
+            Titletext(text: "Password Recovery"),
+            SizedBox(height: 12),
+            Ntext(text: "Enter your registered email below to receive password instructions"),
+            SizedBox(height: 32),
+            AppTextField(controller: emailController, hintText: "Email Address"),
+            SizedBox(height: 82),
+              GestureDetector(onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>  Identify(),),);
+              },
+                  child: AppButton(title: "Send an Email")),
+          ],),
+        ),
       )),
     );
   }

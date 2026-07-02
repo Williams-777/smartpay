@@ -53,7 +53,8 @@ class _IntroState extends State<Intro> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 22),
           child: SingleChildScrollView(
-            child: Column(children: [
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
               RichText(
                 text: TextSpan(
                   style: const TextStyle(
@@ -64,10 +65,10 @@ class _IntroState extends State<Intro> {
                   ),
                   children: [
                     const TextSpan(
-                      text: 'Het there! tell us a bit about',
+                      text: 'Tell us a bit about \n',
                     ),
                     TextSpan(
-                      text: ' yourself.',
+                      text: 'yourself.',
                       style: TextStyle(
                         color: AppColors.links,
                         fontWeight: FontWeight.w700,

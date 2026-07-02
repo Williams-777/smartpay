@@ -26,7 +26,7 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       backgroundColor: AppColors.textwhite,
       appBar: AppBar(
-        leadingWidth: 90,
+        leadingWidth: 81,
         backgroundColor: AppColors.textwhite,
         leading: const AppBarIcon(),),
       body: Padding(
@@ -59,7 +59,13 @@ class _SignInState extends State<SignIn> {
             SizedBox(height: 24),
             AppButton(title: "Sign In",),
             SizedBox(height: 32),
-            Center(child: Ntext(text: "OR")),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Image.asset("assets/images/line.png"),
+                Ntext(text: "OR"),
+                Image.asset("assets/images/line.png"),
+              ],
+            ),
             SizedBox(height: 24),
             Row(children: [
               Container(

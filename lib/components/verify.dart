@@ -28,6 +28,7 @@ class _VerifyState extends State<Verify> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             Titletext(text: "Verify it's you"),
+            SizedBox(height: 12),
             RichText(
               text: TextSpan(
                 style: const TextStyle(
@@ -84,7 +85,7 @@ class _VerifyState extends State<Verify> {
             ),
             SizedBox(height: 32),
             Center(child: Text("Resend Code 30 secs", style: TextStyle(fontFamily: "Inter-Bold", fontWeight: FontWeight.w700, fontSize: 16, color: Color(0xff727272)),)),
-            SizedBox(height: 62),
+            SizedBox(height: 67),
             AppButton(
               title: "Confirm",
               color: _isPinComplete

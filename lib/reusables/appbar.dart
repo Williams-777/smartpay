@@ -10,7 +10,7 @@ class AppBarIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 41),
+      padding: const EdgeInsets.only(left: 24),
       child: Align(
         alignment: Alignment.centerLeft,
         child: GestureDetector(

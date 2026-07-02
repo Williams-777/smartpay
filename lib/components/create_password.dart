@@ -24,23 +24,29 @@ class _CreatePasswordState extends State<CreatePassword> {
       appBar: AppBar(leadingWidth: 90,
         backgroundColor: AppColors.textwhite,
         leading: const AppBarIcon(),),
-      body: SafeArea(child: Column(children: [
-        Titletext(text: "Create a password"),
-        SizedBox(height: 12),
-        Ntext(text: 'Please, enter a new password below different from the previous password'),
-        SizedBox(height: 32),
-        AppTextField(controller: passwordController,obscureText: true, hintText: "Enter Password"),
-        SizedBox(height: 16),
-        AppTextField(controller: confirmpasswordController,obscureText: true, hintText: "Confirm Password"),
-        SizedBox(height: 331),
-        GestureDetector(onTap: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>  SignIn(),),);
-        },
-            child: AppButton(title: "Create a new password")),
-      ],)),
+      body: SafeArea(child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: SingleChildScrollView(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Titletext(text: "Create a password"),
+            SizedBox(height: 12),
+            Ntext(text: 'Please, enter a new password below different from the previous password'),
+            SizedBox(height: 32),
+            AppTextField(controller: passwordController,obscureText: true, hintText: "Enter Password"),
+            SizedBox(height: 16),
+            AppTextField(controller: confirmpasswordController,obscureText: true, hintText: "Confirm Password"),
+            SizedBox(height: 331),
+            GestureDetector(onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>  SignIn(),),);
+            },
+                child: AppButton(title: "Create a new password")),
+          ],),
+        ),
+      )),
     );
   }
 }

@@ -41,7 +41,9 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.textwhite,
-      appBar: AppBar(leading: const AppBarIcon(),),
+      appBar: AppBar(leadingWidth: 81,
+        backgroundColor: AppColors.textwhite,
+        leading: const AppBarIcon(),),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 22),
@@ -60,17 +62,18 @@ class _AccountState extends State<Account> {
                       text: 'Create a ',
                     ),
                     TextSpan(
-                      text: 'Smartpay',
+                      text: 'Smartpay \n',
                       style: TextStyle(
                         color: AppColors.links,
                       ),
                     ),
                     const TextSpan(
-                      text: ' account',
+                      text: 'account',
                     ),
                   ],
                 ),
               ),
+              SizedBox(height: 32),
               AppTextField(controller: emailController, hintText: "Email"),
               SizedBox(height: 24),
               AppButton(
@@ -90,7 +93,13 @@ class _AccountState extends State<Account> {
                     : null,
               ),
               SizedBox(height: 32),
-              Center(child: Ntext(text: "OR")),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset("assets/images/line.png"),
+                    Ntext(text: "OR"),
+                    Image.asset("assets/images/line.png"),
+                  ],
+                ),
               SizedBox(height: 24),
               Row(children: [
                 Container(

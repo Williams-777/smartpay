@@ -23,29 +23,31 @@ class _IdentifyState extends State<Identify> {
       backgroundColor: AppColors.textwhite,
       body: SafeArea(child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 54),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SvgPicture.asset("assets/icons/profile.svg", width: 44, height: 44,),
-            SizedBox(height: 38),
-            Titletext(text: "Verify Your Identity"),
-            SizedBox(height: 12),RecoveryOption(
-              title: 'Email',
-              subtitle: 'A******@mail.com',
-              icon: Icons.email_outlined,
-              selected: true,
-            ),
-            Ntext(text: "Where would you like Smartpay to send your security code?"),
-            SizedBox(height: 53),
-            AppTextField(controller: emailController, hintText: "Email Address"),
-            SizedBox(height: 315),
-            GestureDetector(onTap: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>  CreatePassword(),),);
-            },
-                child: AppButton(title: "Continue")),
-          ],),
+        child: SingleChildScrollView(
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SvgPicture.asset("assets/icons/profile.svg", width: 85, height: 77,),
+              SizedBox(height: 19),
+              Titletext(text: "Verify Your Identity"),
+              SizedBox(height: 12),
+              Ntext(text: "Where would you like Smartpay to send your security code?"),
+              SizedBox(height: 53),
+              RecoveryOption(
+                title: 'Email',
+                subtitle: 'A******@mail.com',
+                icon: Icons.email_outlined,
+                selected: true,
+              ),
+              SizedBox(height: 336),
+              GestureDetector(onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>  CreatePassword(),),);
+              },
+                  child: AppButton(title: "Continue")),
+            ],),
+        ),
       )),
     );
   }

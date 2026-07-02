@@ -13,9 +13,6 @@ class Confirm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.textwhite,
-      appBar: AppBar(leadingWidth: 90,
-        backgroundColor: AppColors.textwhite,
-        leading: const AppBarIcon(),),
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
