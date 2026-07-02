@@ -21,7 +21,7 @@ class AppButton extends StatelessWidget {
   final String? title;
   final Widget? child;
   final VoidCallback? onPressed;
-  final String? color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {

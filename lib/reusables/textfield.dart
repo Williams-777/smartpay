@@ -26,12 +26,12 @@ class _AppTextFieldState extends State<AppTextField> {
   @override
   void initState() {
     super.initState();
-    _obscure = widget.hintText.toLowerCase().contains("password");
+    _obscure = widget.obscureText;
   }
 
   @override
   Widget build(BuildContext context) {
-    final isPasswordField = widget.hintText.toLowerCase().contains("password");
+    final isPasswordField = widget.obscureText;
     return SizedBox(height: 56.h, width: 327,
       child: TextFormField(
         keyboardType: widget.keyboardType,
@@ -64,8 +64,13 @@ class _AppTextFieldState extends State<AppTextField> {
               },
               child: Icon(_obscure?Icons.visibility_off:Icons.visibility, color: AppColors.tColor,)) : null,
           border: OutlineInputBorder(
-            borderSide: BorderSide( color: AppColors.bgwhite),
             borderRadius: BorderRadius.circular(16.r),
+            borderSide: BorderSide.none,
+          ),
+
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16.r),
+            borderSide: BorderSide.none,
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: AppColors.skipcolor),

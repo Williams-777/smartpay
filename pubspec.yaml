@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.3.0
   flutter_screenutil: ^5.9.3
+  pinput: ^6.0.2
+  country_picker: ^2.0.28
+  pin_code_fields: ^9.4.0
 
 dev_dependencies:
   flutter_test:

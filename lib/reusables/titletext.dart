@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TitleText extends StatelessWidget {
+class Titletext extends StatelessWidget {
   final String text;
   final double? fontSize;
   final FontWeight? fontWeight;
   final String? fontFamily;
   final Color? color;
 
-  const TitleText({
+  const Titletext({
     super.key,
     required this.text,
     this.fontSize,
