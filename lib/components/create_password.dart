@@ -16,6 +16,7 @@ class CreatePassword extends StatefulWidget {
 
 class _CreatePasswordState extends State<CreatePassword> {
   final passwordController = TextEditingController();
+  final confirmpasswordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +29,9 @@ class _CreatePasswordState extends State<CreatePassword> {
         SizedBox(height: 12),
         Ntext(text: 'Please, enter a new password below different from the previous password'),
         SizedBox(height: 32),
-        AppTextField(controller: passwordController, hintText: "Enter Password"),
+        AppTextField(controller: passwordController,obscureText: true, hintText: "Enter Password"),
         SizedBox(height: 16),
-        AppTextField(controller: passwordController, hintText: "Confirm Password"),
+        AppTextField(controller: confirmpasswordController,obscureText: true, hintText: "Confirm Password"),
         SizedBox(height: 331),
         GestureDetector(onTap: () {
           Navigator.pushReplacement(
