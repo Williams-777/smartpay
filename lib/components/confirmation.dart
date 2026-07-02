@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_pay/reusables/app_buttons.dart';
 import 'package:smart_pay/reusables/appbar.dart';
@@ -16,15 +17,15 @@ class Confirm extends StatelessWidget {
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-        Image.asset("assets/images/thumbs_up.png", width: 140, height: 135,),
-        SizedBox(height: 32),
+        Image.asset("assets/images/thumbs_up.png", width: 140.w, height: 135.h,),
+        SizedBox(height: 32.h),
         Titletext(text: "Congratulations James"),
-        SizedBox(height: 12),
+        SizedBox(height: 12.h),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 60),
           child: Ntext(text: "You’ve completed the onboarding, you can start using", textAlign: TextAlign.center,),
         ),
-        SizedBox(height: 32,),
+        SizedBox(height: 32.h,),
         AppButton(title: "Get Started"),
       ],),
     );
