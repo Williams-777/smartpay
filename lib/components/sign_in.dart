@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:smart_pay/components/create_account.dart';
 import 'package:smart_pay/components/recovery.dart';
@@ -35,20 +36,20 @@ class _SignInState extends State<SignIn> {
           child: Column(crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             Titletext(text: "Hi There! 👋"),
-            SizedBox(height: 8,),
+            SizedBox(height: 8.h,),
             Ntext(text: "Welcome back, Sign in to your account"),
-            SizedBox(height: 32),
+            SizedBox(height: 32.h),
             AppTextField(
               controller: emailController,
               hintText: 'Email',
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 16.h,),
             AppTextField(
               controller: passwordController,
               hintText: 'Password',
               obscureText: true,
             ),
-            SizedBox(height: 24),
+            SizedBox(height: 24.h),
             GestureDetector(onTap: () {
               Navigator.pushReplacement(
                 context,
@@ -56,9 +57,9 @@ class _SignInState extends State<SignIn> {
                   builder: (context) =>  Recovery(),),);
             },
                 child: Titletext(text: "Forgot Password?", color: AppColors.links, fontSize: 16,)),
-            SizedBox(height: 24),
+            SizedBox(height: 24.h),
             AppButton(title: "Sign In",),
-            SizedBox(height: 32),
+            SizedBox(height: 32.h),
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset("assets/images/line.png"),
@@ -66,7 +67,7 @@ class _SignInState extends State<SignIn> {
                 Image.asset("assets/images/line.png"),
               ],
             ),
-            SizedBox(height: 24),
+            SizedBox(height: 24.h),
             Row(children: [
               Container(
                 width: 150,
@@ -102,7 +103,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
             ],),
-            SizedBox(height: 138),
+            SizedBox(height: 138.h),
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
               Btext(text: "Don’t have an account? "),
@@ -114,7 +115,7 @@ class _SignInState extends State<SignIn> {
               },
                   child: Titletext(text: "Sign Up", color: AppColors.links, fontSize: 16,)),
             ],),
-            SizedBox(height: 8),
+            SizedBox(height: 8.h),
           ],),
         ),
       ),
